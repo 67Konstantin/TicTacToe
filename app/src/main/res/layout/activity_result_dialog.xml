@@ -33,11 +33,23 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:backgroundTint="@color/white"
-            android:text="Сыграть ещё раз"
-            android:layout_margin="20dp"
+            android:text="Сыграть ещё"
+            android:layout_marginHorizontal="20dp"
             android:textColor="@color/lavender"
             app:cornerRadius = "20dp"/>
 
+        <Button
+            android:id="@+id/changeName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@color/white"
+            android:text="Поменять имена"
+            android:textColor="@color/lavender"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            android:onClick="Click"/>
     </LinearLayout>
 
 </RelativeLayout>

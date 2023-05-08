@@ -3,8 +3,10 @@ package com.example.tictactoe;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,9 +30,14 @@ public class ResultDialog extends Dialog {
 
         TextView messageText = findViewById(R.id.messageText);
         Button startAgainButton = findViewById(R.id.startAgainButton);
-
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button changeNames = findViewById(R.id.changeName);
         messageText.setText(message);
-
+        changeNames.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainActivity.startActivity(new Intent(getContext(),AddPlayers.class));
+            }
+        });
         startAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

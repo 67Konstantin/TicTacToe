@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "Match Draw", MainActivity.this);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "Ничья!", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
@@ -138,11 +138,11 @@ public class MainActivity extends AppCompatActivity {
             imageView.setImageResource(R.drawable.oimage);
             if (checkResults()) {
                 ResultDialog resultDialog = new ResultDialog(MainActivity.this, binding.playerTwoName.getText().toString()
-                        + " is a Winner!", MainActivity.this);
+                        + " обедитель!", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else if(totalSelectedBoxes == 9) {
-                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "Match Draw", MainActivity.this);
+                ResultDialog resultDialog = new ResultDialog(MainActivity.this, "Ничья!", MainActivity.this);
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
